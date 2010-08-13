@@ -1,0 +1,25 @@
+{
+	"testTD1":{
+		"op1":[{"op":"i", "pos":0, "text":"1", "user":"A"},{"op":"i", "pos":1, "text":"1", "user":"A"},{"op":"i", "pos":2, "text":"1", "user":"A"}],
+        "op2":[{"op":"i", "pos":0, "text":"2", "user":"B"},{"op":"i", "pos":1, "text":"2", "user":"B"},{"op":"i", "pos":2, "text":"2", "user":"B"}],
+		"result":[{"op":"i", "pos":0, "text":"1", "user":"A"},{"op":"i", "pos":1, "text":"1", "user":"A"},{"op":"i", "pos":2, "text":"1", "user":"A"}]
+	},
+
+	"testTD2":{
+        "op1":[{"op":"i", "pos":0, "text":"2", "user":"B"},{"op":"i", "pos":1, "text":"2", "user":"B"},{"op":"i", "pos":2, "text":"2", "user":"B"}],
+		"op2":[{"op":"i", "pos":0, "text":"1", "user":"A"},{"op":"i", "pos":1, "text":"1", "user":"A"},{"op":"i", "pos":2, "text":"1", "user":"A"}],
+		"result":[{"op":"i", "pos":3, "text":"2", "user":"B"},{"op":"i", "pos":4, "text":"2", "user":"B"},{"op":"i", "pos":5, "text":"2", "user":"B"}]
+        },
+
+	"testTE1":{
+		"op1":[{"op":"i", "pos":0, "text":"1", "user":"A"},{"op":"i", "pos":1, "text":"1", "user":"A"},{"op":"i", "pos":2, "text":"1", "user":"A"}],
+        "op2":[{"op":"i", "pos":0, "text":"2", "user":"B"}],
+		"result":[{"op":"i", "pos":0, "text":"1", "user":"A"},{"op":"i", "pos":1, "text":"1", "user":"A"},{"op":"i", "pos":2, "text":"1", "user":"A"}]
+	},
+
+	"testTE2":{
+        "op1":[{"op":"i", "pos":0, "text":"2", "user":"B"}],
+		"op2":[{"op":"i", "pos":0, "text":"1", "user":"A"},{"op":"i", "pos":1, "text":"1", "user":"A"},{"op":"i", "pos":2, "text":"1", "user":"A"}],
+		"result":[{"op":"i", "pos":3, "text":"2", "user":"B"}]
+    }
+}

@@ -1,0 +1,100 @@
+{
+    "testInsertBeforeInsert":{
+        "result":[{"op":"i","pos":6,"text":"a","user":"B"}],
+        "op1":[{"op":"i","pos":5,"text":"a","user":"B"}],
+        "op2":[{"op":"i","pos":2,"text":"b","user":"A"}]
+    },
+
+    "testInsertAfterInsert":{
+        "result":[{"op":"i","pos":5,"text":"a","user":"B"}],
+        "op1":[{"op":"i","pos":5,"text":"a","user":"B"}],
+        "op2":[{"op":"i","pos":10,"text":"b","user":"A"}]
+    },
+
+    "testInsertsAtSamePositionHigherClientId":{
+        "result":[{"op":"i","pos":6,"text":"a","user":"B"}],
+        "op1":[{"op":"i","pos":5,"text":"a","user":"B"}],
+        "op2":[{"op":"i","pos":5,"text":"b","user":"A"}]
+    },
+
+    "testInsertsAtSamePositionLowerClientId":{
+        "result":[{"op":"i","pos":5,"text":"a","user":"A"}],
+        "op1":[{"op":"i","pos":5,"text":"a","user":"A"}],
+        "op2":[{"op":"i","pos":5,"text":"b","user":"B"}]
+    },
+
+    
+    "testDeleteBeforeDelete":{
+        "result":[{"op":"d","pos":4,"len":1,"user":"B"}],
+        "op1":[{"op":"d","pos":5,"len":1,"user":"B"}],
+        "op2":[{"op":"d","pos":2,"len":1,"user":"A"}]
+    },
+
+    "testDeleteAfterDelete":{
+          "result":[{"op":"d","pos":5,"len":1,"user":"B"}],
+          "op1":[{"op":"d","pos":5,"len":1,"user":"B"}],
+          "op2":[{"op":"d","pos":10,"len":1,"user":"A"}]
+    },
+
+    "testDeleteIncludedInDelete":{
+          "result":[],
+          "op1":[{"op":"d","pos":5,"len":1,"user":"B"}],
+          "op2":[{"op":"d","pos":4,"len":3,"user":"A"}]
+    },
+
+    "testDeleteCoversDelete":{
+          "result":[{"op":"d","pos":2,"len":4,"user":"B"}],
+          "op1":[{"op":"d","pos":2,"len":6,"user":"B"}],
+          "op2":[{"op":"d","pos":4,"len":2,"user":"A"}]
+    },
+
+    "testDeleteOverlapsWithStartOfDelete":{
+        "result":[{"op":"d","pos":5,"len":3,"user":"B"}],
+        "op1":[{"op":"d","pos":5,"len":5,"user":"B"}],
+        "op2":[{"op":"d","pos":8,"len":4,"user":"A"}]
+    },
+
+    "testDeleteOverlapsWithEndOfDelete":{
+        "result":[{"op":"d","pos":5,"len":2,"user":"B"}],
+        "op1":[{"op":"d","pos":8,"len":4,"user":"B"}],
+        "op2":[{"op":"d","pos":5,"len":5,"user":"A"}]
+    },
+
+
+    "testInsertBeforeDelete":{
+        "result":[{"op":"d","pos":6,"len":2,"user":"B"}],
+        "op1":[{"op":"d","pos":5,"len":2,"user":"B"}],
+        "op2":[{"op":"i","pos":2,"text":"a","user":"A"}]
+    },
+
+    "testInsertAfterDelete":{
+        "result":[{"op":"d","pos":5,"len":2,"user":"B"}],
+        "op1":[{"op":"d","pos":5,"len":2,"user":"B"}],
+        "op2":[{"op":"i","pos":10,"text":"a","user":"A"}]
+    },
+
+    "testInsertIncludedInDelete":{
+        "result":[{"op":"d","pos":2,"len":2,"user":"B"}, {"op":"d","pos":5,"len":4,"user":"B"}],
+        "op1":[{"op":"d","pos":2,"len":6,"user":"B"}],
+        "op2":[{"op":"i","pos":4,"text":"abc","user":"A"}]
+    },
+    
+
+    "testDeleteBeforeInsert":{
+        "result":[{"op":"i","pos":4,"text":"a","user":"B"}],
+        "op1":[{"op":"i","pos":5,"text":"a","user":"B"}],
+        "op2":[{"op":"d","pos":2,"len":1,"user":"A"}]
+    },
+
+    "testDeleteAfterInsert":{
+        "result":[{"op":"i","pos":5,"text":"a","user":"B"}],
+        "op1":[{"op":"i","pos":5,"text":"a","user":"B"}],
+        "op2":[{"op":"d","pos":10,"len":1,"user":"A"}]
+    },
+
+    "testDeleteIncludedInInsert":{
+        "result":[{"op":"i","pos":2,"text":"a","user":"B"}],
+        "op1":[{"op":"i","pos":4,"text":"a","user":"B"}],
+        "op2":[{"op":"d","pos":2,"len":6,"user":"A"}]
+    }
+}

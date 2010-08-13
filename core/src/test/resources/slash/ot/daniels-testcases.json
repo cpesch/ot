@@ -1,0 +1,223 @@
+{
+	"testTA1":{
+	        "op1":[{"op":"i", "pos":5, "text":"ABC", "user":"A"}],
+        	"op2":[{"op":"i", "pos":7, "text":"XYZ", "user":"B"}],
+		    "result":[{"op":"i", "pos":5, "text":"ABC", "user":"A"}]
+	},
+
+	"testTA2":{
+        	"op1":[{"op":"i", "pos":7, "text":"XYZ", "user":"B"}],
+	        "op2":[{"op":"i", "pos":5, "text":"ABC", "user":"A"}],
+	    	"result":[{"op":"i", "pos":10, "text":"XYZ", "user":"B"}]
+	},
+
+	"testTB1":{
+	        "op1":[{"op":"d", "pos":4, "len":1, "user":"A"}],
+	        "op2":[{"op":"d", "pos":3, "len":3, "user":"B"}],
+    		"result":[]
+	},
+
+	"testTB2":{
+	        "op1":[{"op":"d", "pos":3, "len":3, "user":"B"}],
+	        "op2":[{"op":"d", "pos":4, "len":1, "user":"A"}],
+            "result":[{"op":"d", "pos":3, "len":2, "user":"B"}]
+	},
+
+	"testTC":{
+		"op1":[{"op":"d", "pos":1, "len":5, "user":"A"}],
+		"op2":[{"op":"i", "pos":2, "text":"ABC", "user":"B"}],
+		"result":[{"op":"d", "pos":1, "len":1, "user":"A"}, {"op":"d", "pos":4, "len":4, "user":"A"}]
+	},
+
+	"testTF1":{
+		"op1":[{"op":"d", "pos":4, "len":4, "user":"A"}],
+		"op2":[{"op":"i", "pos":5, "text":"abc", "user":"B"}],
+		"result":[{"op":"d", "pos":4, "len":1, "user":"A"},{"op":"d", "pos":7, "len":3, "user":"A"}]
+    },
+
+	"testTF2":{
+		"op1":[{"op":"i", "pos":5, "text":"abc", "user":"B"}],
+		"op2":[{"op":"d", "pos":4, "len":4, "user":"A"}],
+        "result":[{"op":"i", "pos":4, "text":"abc", "user":"B"}]
+    },
+
+	"testIA1":{
+		"op1":[{"op":"i", "pos":5, "text":"ABC", "user":"A"}],
+                "op2":[{"op":"i", "pos":7, "text":"XYZ", "user":"B"}],
+		"result":[{"op":"i", "pos":5, "text":"ABC", "user":"A"}]
+    },
+
+	"testIA2":{
+                "op1":[{"op":"i", "pos":7, "text":"XYZ", "user":"B"}],
+		"op2":[{"op":"i", "pos":5, "text":"ABC", "user":"A"}],
+		"result":[{"op":"i", "pos":10, "text":"XYZ", "user":"B"}]
+        },
+
+	"testIB1":{
+		"op1":[{"op":"i", "pos":5, "text":"ABC", "user":"A"}],
+                "op2":[{"op":"i", "pos":5, "text":"1", "user":"B"}],
+		"result":[{"op":"i", "pos":5, "text":"ABC", "user":"A"}]
+        },
+
+	"testIB2":{
+                "op1":[{"op":"i", "pos":5, "text":"1", "user":"B"}],
+		"op2":[{"op":"i", "pos":5, "text":"ABC", "user":"A"}],
+		"result":[{"op":"i", "pos":8, "text":"1", "user":"B"}]
+        },
+
+	"testIC":{
+		"op1":[{"op":"i", "pos":5, "text":"ABC", "user":"A"}],
+		"op2":[{"op":"d", "pos":10, "len":2, "user":"B"}],
+		"result":[{"op":"i", "pos":5, "text":"ABC", "user":"A"}]
+	},
+
+	"testID":{
+		"op1":[{"op":"i", "pos":5, "text":"ABC", "user":"A"}],
+		"op2":[{"op":"d", "pos":1, "len":2, "user":"B"}],
+		"result":[{"op":"i", "pos":3, "text":"ABC", "user":"A"}]
+	},
+
+	"testIE":{
+		"op1":[{"op":"i", "pos":5, "text":"ABC", "user":"A"}],
+		"op2":[{"op":"d", "pos":5, "len":2, "user":"B"}],
+		"result":[{"op":"i", "pos":5, "text":"ABC", "user":"A"}]
+	},
+
+	"testIF":{
+		"op1":[{"op":"i", "pos":5, "text":"ABC", "user":"B"}],
+		"op2":[{"op":"d", "pos":5, "len":2, "user":"A"}],
+		"result":[{"op":"i", "pos":5, "text":"ABC", "user":"B"}]
+	},
+
+	"testIG":{
+		"op1":[{"op":"i", "pos":5, "text":"ABC", "user":"B"}],
+		"op2":[{"op":"d", "pos":1, "len":7, "user":"A"}],
+		"result":[{"op":"i", "pos":1, "text":"ABC", "user":"B"}]
+	},
+
+	"testIH":{
+		"op1":[{"op":"i", "pos":5, "text":"ABC", "user":"B"}],
+		"op2":[{"op":"d", "pos":1, "len":4, "user":"A"}],
+		"result":[{"op":"i", "pos":1, "text":"ABC", "user":"B"}]
+	},
+
+	"testDA1":{
+		"op1":[{"op":"d", "pos":3, "len":1, "user":"A"}],
+		"op2":[{"op":"d", "pos":7, "len":1, "user":"B"}],
+		"result":[{"op":"d", "pos":3, "len":1, "user":"A"}]
+	},
+
+    "testDA2":{
+        "op1":[{"op":"d", "pos":7, "len":1, "user":"B"}],
+        "op2":[{"op":"d", "pos":3, "len":1, "user":"A"}],
+        "result":[{"op":"d", "pos":6, "len":1, "user":"B"}]
+    },
+
+	"testDB1":{
+		"op1":[{"op":"d", "pos":4, "len":1, "user":"A"}],
+		"op2":[{"op":"d", "pos":3, "len":3, "user":"B"}],
+		"result":[]
+	},
+
+	"testDB2":{
+		"op1":[{"op":"d", "pos":3, "len":3, "user":"B"}],
+		"op2":[{"op":"d", "pos":4, "len":1, "user":"A"}],
+		"result":[{"op":"d", "pos":3, "len":2, "user":"B"}]
+	},
+
+	"testDC1":{
+		"op1":[{"op":"d", "pos":3, "len":1, "user":"A"}],
+		"op2":[{"op":"d", "pos":3, "len":3, "user":"B"}],
+		"result":[]
+	},
+
+	"testDC2":{
+		"op1":[{"op":"d", "pos":3, "len":3, "user":"B"}],
+		"op2":[{"op":"d", "pos":3, "len":1, "user":"A"}],
+		"result":[{"op":"d", "pos":3, "len":2, "user":"B"}]
+	},
+
+	"testDD1":{
+		"op1":[{"op":"d", "pos":5, "len":1, "user":"A"}],
+		"op2":[{"op":"d", "pos":3, "len":3, "user":"B"}],
+		"result":[]
+	},
+
+	"testDD2":{
+		"op1":[{"op":"d", "pos":3, "len":3, "user":"B"}],
+		"op2":[{"op":"d", "pos":5, "len":1, "user":"A"}],
+		"result":[{"op":"d", "pos":3, "len":2, "user":"B"}]
+	},
+
+	"testDE1":{
+		"op1":[{"op":"d", "pos":1, "len":3, "user":"A"}],
+		"op2":[{"op":"d", "pos":3, "len":3, "user":"B"}],
+		"result":[{"op":"d", "pos":1, "len":2, "user":"A"}]
+	},
+
+	"testDE2":{
+		"op1":[{"op":"d", "pos":3, "len":3, "user":"B"}],
+		"op2":[{"op":"d", "pos":1, "len":3, "user":"A"}],
+		"result":[{"op":"d", "pos":1, "len":2, "user":"B"}]
+	},
+
+	"testDF1":{
+		"op1":[{"op":"d", "pos":1, "len":3, "user":"A"}],
+		"op2":[{"op":"d", "pos":4, "len":3, "user":"B"}],
+		"result":[{"op":"d", "pos":1, "len":3, "user":"A"}]
+	},
+
+	"testDF2":{
+		"op1":[{"op":"d", "pos":4, "len":3, "user":"B"}],
+		"op2":[{"op":"d", "pos":1, "len":3, "user":"A"}],
+		"result":[{"op":"d", "pos":1, "len":3, "user":"B"}]
+	},
+
+	"testDG":{
+		"op1":[{"op":"d", "pos":1, "len":2, "user":"A"}],
+		"op2":[{"op":"i", "pos":4, "text":"ABC", "user":"B"}],
+		"result":[{"op":"d", "pos":1, "len":2, "user":"A"}]
+	},
+
+	"testDH":{
+		"op1":[{"op":"d", "pos":2, "len":2, "user":"A"}],
+		"op2":[{"op":"i", "pos":1, "text":"ABC", "user":"B"}],
+		"result":[{"op":"d", "pos":5, "len":2, "user":"A"}]
+	},
+
+	"testDI":{
+		"op1":[{"op":"d", "pos":2, "len":2, "user":"A"}],
+		"op2":[{"op":"i", "pos":2, "text":"ABC", "user":"B"}],
+		"result":[{"op":"d", "pos":5, "len":2, "user":"A"}]
+	},
+
+	"testDJ":{
+		"op1":[{"op":"d", "pos":3, "len":1, "user":"A"}],
+		"op2":[{"op":"i", "pos":2, "text":"ABC", "user":"B"}],
+		"result":[{"op":"d", "pos":6, "len":1, "user":"A"}]
+	},
+
+	"testDL":{
+		"op1":[{"op":"d", "pos":1, "len":5, "user":"A"}],
+		"op2":[{"op":"i", "pos":2, "text":"ABC", "user":"B"}],
+		"result":[{"op":"d", "pos":1, "len":1, "user":"A"},{"op":"d", "pos":4, "len":4, "user":"A"}]
+	},
+
+	"testDM":{
+		"op1":[{"op":"d", "pos":1, "len":7, "user":"A"}],
+		"op2":[{"op":"i", "pos":2, "text":"ABC", "user":"B"}],
+		"result":[{"op":"d", "pos":1, "len":1, "user":"A"},{"op":"d", "pos":4, "len":6, "user":"A"}]
+	},
+
+	"testDN":{
+		"op1":[{"op":"d", "pos":1, "len":7, "user":"A"}],
+		"op2":[{"op":"i", "pos":3, "text":"ABC", "user":"B"}],
+		"result":[{"op":"d", "pos":1, "len":2, "user":"A"},{"op":"d", "pos":4, "len":5, "user":"A"}]
+	},
+
+	"testDO":{
+		"op1":[{"op":"d", "pos":4, "len":4, "user":"A"}],
+		"op2":[{"op":"i", "pos":5, "text":"ABC", "user":"B"}],
+		"result":[{"op":"d", "pos":4, "len":1, "user":"A"},{"op":"d", "pos":7, "len":3, "user":"A"}]
+	}
+}
