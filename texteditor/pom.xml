@@ -18,7 +18,7 @@
             <version>1-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>intellij</groupId>
+            <groupId>com.intellij</groupId>
             <artifactId>forms-rt</artifactId>
             <version>6.0.5</version>
         </dependency>

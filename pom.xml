@@ -16,11 +16,8 @@
     </developers>
     <repositories>
         <repository>
-            <id>ot-thirdparty</id>
-            <url>file://thirdparty</url>
-            <releases>
-                <checksumPolicy>ignore</checksumPolicy>
-            </releases>
+            <id>routeconverter-thirdparty</id>
+            <url>http://www.routeconverter.de/svn/RouteThirdParty</url>
         </repository>
     </repositories>
     <build>
